@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A56D7CC625754D4800B46BCB /* SimpleLoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56D7CC525754D4800B46BCB /* SimpleLoginRouter.swift */; };
-		A57D38F425723FAA00321B05 /* HostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D38F325723FAA00321B05 /* HostController.swift */; };
 		A57D38FB257240EC00321B05 /* DefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D38FA257240EC00321B05 /* DefaultsWrapper.swift */; };
 		A57D39002572417200321B05 /* SimpleStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D38FF2572417200321B05 /* SimpleStorage.swift */; };
 		A57D39062572426B00321B05 /* DateHelper in Frameworks */ = {isa = PBXBuildFile; productRef = A57D39052572426B00321B05 /* DateHelper */; };
@@ -72,7 +71,6 @@
 
 /* Begin PBXFileReference section */
 		A56D7CC525754D4800B46BCB /* SimpleLoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLoginRouter.swift; sourceTree = "<group>"; };
-		A57D38F325723FAA00321B05 /* HostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostController.swift; sourceTree = "<group>"; };
 		A57D38FA257240EC00321B05 /* DefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsWrapper.swift; sourceTree = "<group>"; };
 		A57D38FF2572417200321B05 /* SimpleStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStorage.swift; sourceTree = "<group>"; };
 		A57D390B257244C900321B05 /* IStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IStorage.swift; sourceTree = "<group>"; };
@@ -150,27 +148,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A57D38E625723BF200321B05 /* AuthMethod */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AuthMethod;
-			sourceTree = "<group>";
-		};
-		A57D38E725723BFF00321B05 /* SignUpForm */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SignUpForm;
-			sourceTree = "<group>";
-		};
-		A57D38E825723C9900321B05 /* Dashboard */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Dashboard;
-			sourceTree = "<group>";
-		};
 		A57D38E925723D2A00321B05 /* MyTrips */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,27 +164,6 @@
 			path = MyTrips;
 			sourceTree = "<group>";
 		};
-		A57D38EA25723D3100321B05 /* MyStats */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MyStats;
-			sourceTree = "<group>";
-		};
-		A57D38EB25723D3800321B05 /* Feed */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Feed;
-			sourceTree = "<group>";
-		};
-		A57D38EC25723D4000321B05 /* Notifications */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Notifications;
-			sourceTree = "<group>";
-		};
 		A57D38ED25723DE700321B05 /* TripDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,25 +174,10 @@
 		A57D38EE25723DF800321B05 /* Trip */ = {
 			isa = PBXGroup;
 			children = (
-				A57D38EF25723E0C00321B05 /* TripStep */,
 				A57D38ED25723DE700321B05 /* TripDetails */,
 				A57D38E925723D2A00321B05 /* MyTrips */,
 			);
 			path = Trip;
-			sourceTree = "<group>";
-		};
-		A57D38EF25723E0C00321B05 /* TripStep */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TripStep;
-			sourceTree = "<group>";
-		};
-		A57D390A257243AB00321B05 /* Menu */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Menu;
 			sourceTree = "<group>";
 		};
 		A57D39192572486500321B05 /* Frameworks */ = {
@@ -341,20 +282,10 @@
 			path = Storage;
 			sourceTree = "<group>";
 		};
-		A58BA7902571176200ED9E3E /* Root */ = {
-			isa = PBXGroup;
-			children = (
-				A57D38F325723FAA00321B05 /* HostController.swift */,
-			);
-			path = Root;
-			sourceTree = "<group>";
-		};
 		A58BA7912571176A00ED9E3E /* Guest */ = {
 			isa = PBXGroup;
 			children = (
 				A5FAE04D2574EB96009EDFB6 /* SimpleLogin */,
-				A57D38E625723BF200321B05 /* AuthMethod */,
-				A57D38E725723BFF00321B05 /* SignUpForm */,
 			);
 			path = Guest;
 			sourceTree = "<group>";
@@ -362,13 +293,7 @@
 		A58BA7922571177100ED9E3E /* Client */ = {
 			isa = PBXGroup;
 			children = (
-				A57D390A257243AB00321B05 /* Menu */,
 				A57D38EE25723DF800321B05 /* Trip */,
-				A57D38EC25723D4000321B05 /* Notifications */,
-				A57D38EB25723D3800321B05 /* Feed */,
-				A57D38EA25723D3100321B05 /* MyStats */,
-				A57D38E825723C9900321B05 /* Dashboard */,
-				A58BA7902571176200ED9E3E /* Root */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -584,7 +509,6 @@
 				A5FAE0E325753573009EDFB6 /* CollectionItemPresenter+.swift in Sources */,
 				A5FAE0812575011E009EDFB6 /* DependenciesContainer.swift in Sources */,
 				A5FAE0C3257525D0009EDFB6 /* MyTripsRepository.swift in Sources */,
-				A57D38F425723FAA00321B05 /* HostController.swift in Sources */,
 				A5FAE0CD25752966009EDFB6 /* TripCell.swift in Sources */,
 				A5FAE0D425752EE1009EDFB6 /* TripMetricLabel.swift in Sources */,
 				A57D38FB257240EC00321B05 /* DefaultsWrapper.swift in Sources */,
