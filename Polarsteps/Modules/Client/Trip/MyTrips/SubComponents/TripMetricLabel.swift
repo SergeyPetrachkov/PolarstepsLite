@@ -17,17 +17,24 @@ final class TripMetricLabel: UIView {
     return formatter
   }()
   // MARK: - UI properties
-  private let stack = UIStackView(frame: .zero)
+  private let stack: UIStackView = {
+    let view = UIStackView(frame: .zero)
+    view.axis = .vertical
+    view.alignment = .leading
+    return view
+  }()
 
   private let topLabel: UILabel = {
     let label = UILabel(frame: .zero)
-    label.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+    label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+    label.textColor = UIColor.white
     return label
   }()
 
   private let bottomLabel: UILabel = {
     let label = UILabel(frame: .zero)
-    label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
+    label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+    label.textColor = UIColor.white
     return label
   }()
 
@@ -37,6 +44,10 @@ final class TripMetricLabel: UIView {
     self.addSubview(self.stack)
     self.stack.addArrangedSubview(self.topLabel)
     self.stack.addArrangedSubview(self.bottomLabel)
+    self.stack.translatesAutoresizingMaskIntoConstraints = false
+    self.topLabel.translatesAutoresizingMaskIntoConstraints = false
+    self.bottomLabel.translatesAutoresizingMaskIntoConstraints = false
+    self.stack.pinEdges(to: self)
   }
 
   required init?(coder: NSCoder) {
