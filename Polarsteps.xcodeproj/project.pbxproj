@@ -3,18 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A57D38F425723FAA00321B05 /* HostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D38F325723FAA00321B05 /* HostController.swift */; };
+		A57D38FB257240EC00321B05 /* DefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D38FA257240EC00321B05 /* DefaultsWrapper.swift */; };
+		A57D39002572417200321B05 /* SimpleStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D38FF2572417200321B05 /* SimpleStorage.swift */; };
+		A57D39062572426B00321B05 /* DateHelper in Frameworks */ = {isa = PBXBuildFile; productRef = A57D39052572426B00321B05 /* DateHelper */; };
+		A57D390C257244C900321B05 /* IStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D390B257244C900321B05 /* IStorage.swift */; };
 		A58BA7332571158600ED9E3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58BA7322571158600ED9E3E /* AppDelegate.swift */; };
-		A58BA7352571158700ED9E3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58BA7342571158700ED9E3E /* SceneDelegate.swift */; };
-		A58BA7372571158700ED9E3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58BA7362571158700ED9E3E /* ViewController.swift */; };
-		A58BA73A2571158700ED9E3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58BA7382571158700ED9E3E /* Main.storyboard */; };
 		A58BA73C2571158A00ED9E3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58BA73B2571158A00ED9E3E /* Assets.xcassets */; };
 		A58BA73F2571158A00ED9E3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58BA73D2571158A00ED9E3E /* LaunchScreen.storyboard */; };
 		A58BA74A2571158A00ED9E3E /* PolarstepsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58BA7492571158A00ED9E3E /* PolarstepsTests.swift */; };
 		A58BA7552571158B00ED9E3E /* PolarstepsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58BA7542571158B00ED9E3E /* PolarstepsUITests.swift */; };
+		A58BA7772571168000ED9E3E /* SiberianSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A58BA7762571168000ED9E3E /* SiberianSwift */; };
+		A58BA77D2571169B00ED9E3E /* SiberianVIPER in Frameworks */ = {isa = PBXBuildFile; productRef = A58BA77C2571169B00ED9E3E /* SiberianVIPER */; };
+		A58BA783257116DE00ED9E3E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = A58BA782257116DE00ED9E3E /* SDWebImage */; };
+		A58BA7892571175000ED9E3E /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58BA7882571175000ED9E3E /* Keychain.swift */; };
+		A5FAE0472574EB14009EDFB6 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = A5FAE0462574EB14009EDFB6 /* Domain */; };
+		A5FAE0492574EB21009EDFB6 /* APIClient in Frameworks */ = {isa = PBXBuildFile; productRef = A5FAE0482574EB21009EDFB6 /* APIClient */; };
+		A5FAE04F2574EBA4009EDFB6 /* SimpleLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE04E2574EBA4009EDFB6 /* SimpleLoginController.swift */; };
+		A5FAE0542574EBB0009EDFB6 /* SimpleLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0532574EBB0009EDFB6 /* SimpleLoginViewModel.swift */; };
+		A5FAE05B2574F6A2009EDFB6 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE05A2574F6A2009EDFB6 /* ActionButton.swift */; };
+		A5FAE0612574F713009EDFB6 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0602574F713009EDFB6 /* UIColor+.swift */; };
+		A5FAE0662574F729009EDFB6 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0652574F729009EDFB6 /* UIImage+.swift */; };
+		A5FAE06B2574F9BE009EDFB6 /* SimpleLoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE06A2574F9BE009EDFB6 /* SimpleLoginAssembly.swift */; };
+		A5FAE0702574FA70009EDFB6 /* SimpleLoginEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE06F2574FA70009EDFB6 /* SimpleLoginEntities.swift */; };
+		A5FAE0812575011E009EDFB6 /* DependenciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0802575011E009EDFB6 /* DependenciesContainer.swift */; };
+		A5FAE0862575017A009EDFB6 /* NetworkingCore in Frameworks */ = {isa = PBXBuildFile; productRef = A5FAE0852575017A009EDFB6 /* NetworkingCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +52,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A57D38F325723FAA00321B05 /* HostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostController.swift; sourceTree = "<group>"; };
+		A57D38FA257240EC00321B05 /* DefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsWrapper.swift; sourceTree = "<group>"; };
+		A57D38FF2572417200321B05 /* SimpleStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStorage.swift; sourceTree = "<group>"; };
+		A57D390B257244C900321B05 /* IStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IStorage.swift; sourceTree = "<group>"; };
 		A58BA72F2571158600ED9E3E /* Polarsteps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polarsteps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58BA7322571158600ED9E3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A58BA7342571158700ED9E3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A58BA7362571158700ED9E3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A58BA7392571158700ED9E3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A58BA73B2571158A00ED9E3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A58BA73E2571158A00ED9E3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A58BA7402571158A00ED9E3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +67,17 @@
 		A58BA7502571158B00ED9E3E /* PolarstepsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolarstepsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58BA7542571158B00ED9E3E /* PolarstepsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarstepsUITests.swift; sourceTree = "<group>"; };
 		A58BA7562571158B00ED9E3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A58BA76B2571161300ED9E3E /* Domain */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Domain; sourceTree = "<group>"; };
+		A58BA7882571175000ED9E3E /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		A5FAE03F2574E5F5009EDFB6 /* APIClient */ = {isa = PBXFileReference; lastKnownFileType = folder; path = APIClient; sourceTree = "<group>"; };
+		A5FAE04E2574EBA4009EDFB6 /* SimpleLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLoginController.swift; sourceTree = "<group>"; };
+		A5FAE0532574EBB0009EDFB6 /* SimpleLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLoginViewModel.swift; sourceTree = "<group>"; };
+		A5FAE05A2574F6A2009EDFB6 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		A5FAE0602574F713009EDFB6 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		A5FAE0652574F729009EDFB6 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		A5FAE06A2574F9BE009EDFB6 /* SimpleLoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLoginAssembly.swift; sourceTree = "<group>"; };
+		A5FAE06F2574FA70009EDFB6 /* SimpleLoginEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLoginEntities.swift; sourceTree = "<group>"; };
+		A5FAE0802575011E009EDFB6 /* DependenciesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +85,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5FAE0472574EB14009EDFB6 /* Domain in Frameworks */,
+				A5FAE0862575017A009EDFB6 /* NetworkingCore in Frameworks */,
+				A57D39062572426B00321B05 /* DateHelper in Frameworks */,
+				A58BA783257116DE00ED9E3E /* SDWebImage in Frameworks */,
+				A58BA77D2571169B00ED9E3E /* SiberianVIPER in Frameworks */,
+				A5FAE0492574EB21009EDFB6 /* APIClient in Frameworks */,
+				A58BA7772571168000ED9E3E /* SiberianSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,13 +112,103 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A57D38E625723BF200321B05 /* AuthMethod */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AuthMethod;
+			sourceTree = "<group>";
+		};
+		A57D38E725723BFF00321B05 /* SignUpForm */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignUpForm;
+			sourceTree = "<group>";
+		};
+		A57D38E825723C9900321B05 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		A57D38E925723D2A00321B05 /* MyTrips */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MyTrips;
+			sourceTree = "<group>";
+		};
+		A57D38EA25723D3100321B05 /* MyStats */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MyStats;
+			sourceTree = "<group>";
+		};
+		A57D38EB25723D3800321B05 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		A57D38EC25723D4000321B05 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		A57D38ED25723DE700321B05 /* TripDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TripDetails;
+			sourceTree = "<group>";
+		};
+		A57D38EE25723DF800321B05 /* Trip */ = {
+			isa = PBXGroup;
+			children = (
+				A57D38EF25723E0C00321B05 /* TripStep */,
+				A57D38ED25723DE700321B05 /* TripDetails */,
+				A57D38E925723D2A00321B05 /* MyTrips */,
+			);
+			path = Trip;
+			sourceTree = "<group>";
+		};
+		A57D38EF25723E0C00321B05 /* TripStep */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TripStep;
+			sourceTree = "<group>";
+		};
+		A57D390A257243AB00321B05 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		A57D39192572486500321B05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A58BA7262571158600ED9E3E = {
 			isa = PBXGroup;
 			children = (
+				A5FAE03F2574E5F5009EDFB6 /* APIClient */,
+				A58BA76B2571161300ED9E3E /* Domain */,
 				A58BA7312571158600ED9E3E /* Polarsteps */,
 				A58BA7482571158A00ED9E3E /* PolarstepsTests */,
 				A58BA7532571158B00ED9E3E /* PolarstepsUITests */,
 				A58BA7302571158600ED9E3E /* Products */,
+				A57D39192572486500321B05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +225,9 @@
 		A58BA7312571158600ED9E3E /* Polarsteps */ = {
 			isa = PBXGroup;
 			children = (
-				A58BA7322571158600ED9E3E /* AppDelegate.swift */,
-				A58BA7342571158700ED9E3E /* SceneDelegate.swift */,
-				A58BA7362571158700ED9E3E /* ViewController.swift */,
-				A58BA7382571158700ED9E3E /* Main.storyboard */,
+				A58BA76A257115DA00ED9E3E /* Application */,
+				A58BA769257115D200ED9E3E /* Shared */,
+				A58BA768257115CC00ED9E3E /* Modules */,
 				A58BA73B2571158A00ED9E3E /* Assets.xcassets */,
 				A58BA73D2571158A00ED9E3E /* LaunchScreen.storyboard */,
 				A58BA7402571158A00ED9E3E /* Info.plist */,
@@ -128,6 +253,105 @@
 			path = PolarstepsUITests;
 			sourceTree = "<group>";
 		};
+		A58BA768257115CC00ED9E3E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A58BA7912571176A00ED9E3E /* Guest */,
+				A58BA7922571177100ED9E3E /* Client */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A58BA769257115D200ED9E3E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A5FAE05F2574F707009EDFB6 /* Extensions */,
+				A5FAE0592574F68E009EDFB6 /* Components */,
+				A58BA7872571171F00ED9E3E /* Storage */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A58BA76A257115DA00ED9E3E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A58BA7322571158600ED9E3E /* AppDelegate.swift */,
+				A5FAE0802575011E009EDFB6 /* DependenciesContainer.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A58BA7872571171F00ED9E3E /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				A58BA7882571175000ED9E3E /* Keychain.swift */,
+				A57D38FA257240EC00321B05 /* DefaultsWrapper.swift */,
+				A57D38FF2572417200321B05 /* SimpleStorage.swift */,
+				A57D390B257244C900321B05 /* IStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		A58BA7902571176200ED9E3E /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				A57D38F325723FAA00321B05 /* HostController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		A58BA7912571176A00ED9E3E /* Guest */ = {
+			isa = PBXGroup;
+			children = (
+				A5FAE04D2574EB96009EDFB6 /* SimpleLogin */,
+				A57D38E625723BF200321B05 /* AuthMethod */,
+				A57D38E725723BFF00321B05 /* SignUpForm */,
+			);
+			path = Guest;
+			sourceTree = "<group>";
+		};
+		A58BA7922571177100ED9E3E /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				A57D390A257243AB00321B05 /* Menu */,
+				A57D38EE25723DF800321B05 /* Trip */,
+				A57D38EC25723D4000321B05 /* Notifications */,
+				A57D38EB25723D3800321B05 /* Feed */,
+				A57D38EA25723D3100321B05 /* MyStats */,
+				A57D38E825723C9900321B05 /* Dashboard */,
+				A58BA7902571176200ED9E3E /* Root */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		A5FAE04D2574EB96009EDFB6 /* SimpleLogin */ = {
+			isa = PBXGroup;
+			children = (
+				A5FAE04E2574EBA4009EDFB6 /* SimpleLoginController.swift */,
+				A5FAE0532574EBB0009EDFB6 /* SimpleLoginViewModel.swift */,
+				A5FAE06A2574F9BE009EDFB6 /* SimpleLoginAssembly.swift */,
+				A5FAE06F2574FA70009EDFB6 /* SimpleLoginEntities.swift */,
+			);
+			path = SimpleLogin;
+			sourceTree = "<group>";
+		};
+		A5FAE0592574F68E009EDFB6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A5FAE05A2574F6A2009EDFB6 /* ActionButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A5FAE05F2574F707009EDFB6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A5FAE0602574F713009EDFB6 /* UIColor+.swift */,
+				A5FAE0652574F729009EDFB6 /* UIImage+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +368,15 @@
 			dependencies = (
 			);
 			name = Polarsteps;
+			packageProductDependencies = (
+				A58BA7762571168000ED9E3E /* SiberianSwift */,
+				A58BA77C2571169B00ED9E3E /* SiberianVIPER */,
+				A58BA782257116DE00ED9E3E /* SDWebImage */,
+				A57D39052572426B00321B05 /* DateHelper */,
+				A5FAE0462574EB14009EDFB6 /* Domain */,
+				A5FAE0482574EB21009EDFB6 /* APIClient */,
+				A5FAE0852575017A009EDFB6 /* NetworkingCore */,
+			);
 			productName = Polarsteps;
 			productReference = A58BA72F2571158600ED9E3E /* Polarsteps.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +448,12 @@
 				Base,
 			);
 			mainGroup = A58BA7262571158600ED9E3E;
+			packageReferences = (
+				A58BA7752571168000ED9E3E /* XCRemoteSwiftPackageReference "SiberianSwift" */,
+				A58BA77B2571169B00ED9E3E /* XCRemoteSwiftPackageReference "SiberianVIPER" */,
+				A58BA781257116DE00ED9E3E /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				A57D39042572426B00321B05 /* XCRemoteSwiftPackageReference "DateHelper" */,
+			);
 			productRefGroup = A58BA7302571158600ED9E3E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +472,6 @@
 			files = (
 				A58BA73F2571158A00ED9E3E /* LaunchScreen.storyboard in Resources */,
 				A58BA73C2571158A00ED9E3E /* Assets.xcassets in Resources */,
-				A58BA73A2571158700ED9E3E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +496,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A58BA7372571158700ED9E3E /* ViewController.swift in Sources */,
+				A5FAE0542574EBB0009EDFB6 /* SimpleLoginViewModel.swift in Sources */,
+				A5FAE0612574F713009EDFB6 /* UIColor+.swift in Sources */,
+				A5FAE04F2574EBA4009EDFB6 /* SimpleLoginController.swift in Sources */,
+				A5FAE0702574FA70009EDFB6 /* SimpleLoginEntities.swift in Sources */,
+				A5FAE05B2574F6A2009EDFB6 /* ActionButton.swift in Sources */,
+				A58BA7892571175000ED9E3E /* Keychain.swift in Sources */,
+				A5FAE0812575011E009EDFB6 /* DependenciesContainer.swift in Sources */,
+				A57D38F425723FAA00321B05 /* HostController.swift in Sources */,
+				A57D38FB257240EC00321B05 /* DefaultsWrapper.swift in Sources */,
 				A58BA7332571158600ED9E3E /* AppDelegate.swift in Sources */,
-				A58BA7352571158700ED9E3E /* SceneDelegate.swift in Sources */,
+				A5FAE06B2574F9BE009EDFB6 /* SimpleLoginAssembly.swift in Sources */,
+				A5FAE0662574F729009EDFB6 /* UIImage+.swift in Sources */,
+				A57D39002572417200321B05 /* SimpleStorage.swift in Sources */,
+				A57D390C257244C900321B05 /* IStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +545,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A58BA7382571158700ED9E3E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A58BA7392571158700ED9E3E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A58BA73D2571158A00ED9E3E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -366,7 +607,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +662,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -439,6 +680,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TVTBG99HF3;
 				INFOPLIST_FILE = Polarsteps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,6 +700,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TVTBG99HF3;
 				INFOPLIST_FILE = Polarsteps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -593,6 +836,76 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A57D39042572426B00321B05 /* XCRemoteSwiftPackageReference "DateHelper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SergeyPetrachkov/DateHelper";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		A58BA7752571168000ED9E3E /* XCRemoteSwiftPackageReference "SiberianSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SergeyPetrachkov/SiberianSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.3;
+			};
+		};
+		A58BA77B2571169B00ED9E3E /* XCRemoteSwiftPackageReference "SiberianVIPER" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SergeyPetrachkov/SiberianVIPER";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+		A58BA781257116DE00ED9E3E /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A57D39052572426B00321B05 /* DateHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A57D39042572426B00321B05 /* XCRemoteSwiftPackageReference "DateHelper" */;
+			productName = DateHelper;
+		};
+		A58BA7762571168000ED9E3E /* SiberianSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A58BA7752571168000ED9E3E /* XCRemoteSwiftPackageReference "SiberianSwift" */;
+			productName = SiberianSwift;
+		};
+		A58BA77C2571169B00ED9E3E /* SiberianVIPER */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A58BA77B2571169B00ED9E3E /* XCRemoteSwiftPackageReference "SiberianVIPER" */;
+			productName = SiberianVIPER;
+		};
+		A58BA782257116DE00ED9E3E /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A58BA781257116DE00ED9E3E /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		A5FAE0462574EB14009EDFB6 /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
+		};
+		A5FAE0482574EB21009EDFB6 /* APIClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = APIClient;
+		};
+		A5FAE0852575017A009EDFB6 /* NetworkingCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkingCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A58BA7272571158600ED9E3E /* Project object */;
 }
