@@ -35,6 +35,12 @@
 		A5FAE08C25750C17009EDFB6 /* JuicyToast in Frameworks */ = {isa = PBXBuildFile; productRef = A5FAE08B25750C17009EDFB6 /* JuicyToast */; };
 		A5FAE09125750C50009EDFB6 /* ToastFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE09025750C50009EDFB6 /* ToastFactory.swift */; };
 		A5FAE0962575193F009EDFB6 /* SecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0952575193F009EDFB6 /* SecureStorage.swift */; };
+		A5FAE09B25751FF1009EDFB6 /* MyTripsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE09A25751FF1009EDFB6 /* MyTripsController.swift */; };
+		A5FAE0A025752020009EDFB6 /* MyTripsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE09F25752020009EDFB6 /* MyTripsPresenter.swift */; };
+		A5FAE0A525752034009EDFB6 /* MyTripsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0A425752034009EDFB6 /* MyTripsInteractor.swift */; };
+		A5FAE0AA2575203F009EDFB6 /* MyTripsEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0A92575203F009EDFB6 /* MyTripsEntities.swift */; };
+		A5FAE0AF25752085009EDFB6 /* UIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0AE25752085009EDFB6 /* UIWindow+.swift */; };
+		A5FAE0B5257520F3009EDFB6 /* SessionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0B4257520F3009EDFB6 /* SessionRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +89,12 @@
 		A5FAE0802575011E009EDFB6 /* DependenciesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesContainer.swift; sourceTree = "<group>"; };
 		A5FAE09025750C50009EDFB6 /* ToastFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastFactory.swift; sourceTree = "<group>"; };
 		A5FAE0952575193F009EDFB6 /* SecureStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStorage.swift; sourceTree = "<group>"; };
+		A5FAE09A25751FF1009EDFB6 /* MyTripsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsController.swift; sourceTree = "<group>"; };
+		A5FAE09F25752020009EDFB6 /* MyTripsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsPresenter.swift; sourceTree = "<group>"; };
+		A5FAE0A425752034009EDFB6 /* MyTripsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsInteractor.swift; sourceTree = "<group>"; };
+		A5FAE0A92575203F009EDFB6 /* MyTripsEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsEntities.swift; sourceTree = "<group>"; };
+		A5FAE0AE25752085009EDFB6 /* UIWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+.swift"; sourceTree = "<group>"; };
+		A5FAE0B4257520F3009EDFB6 /* SessionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +154,10 @@
 		A57D38E925723D2A00321B05 /* MyTrips */ = {
 			isa = PBXGroup;
 			children = (
+				A5FAE09A25751FF1009EDFB6 /* MyTripsController.swift */,
+				A5FAE09F25752020009EDFB6 /* MyTripsPresenter.swift */,
+				A5FAE0A425752034009EDFB6 /* MyTripsInteractor.swift */,
+				A5FAE0A92575203F009EDFB6 /* MyTripsEntities.swift */,
 			);
 			path = MyTrips;
 			sourceTree = "<group>";
@@ -271,6 +287,7 @@
 		A58BA769257115D200ED9E3E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A5FAE0B3257520E5009EDFB6 /* AppSession */,
 				A5FAE05F2574F707009EDFB6 /* Extensions */,
 				A5FAE0592574F68E009EDFB6 /* Components */,
 				A58BA7872571171F00ED9E3E /* Storage */,
@@ -356,8 +373,17 @@
 			children = (
 				A5FAE0602574F713009EDFB6 /* UIColor+.swift */,
 				A5FAE0652574F729009EDFB6 /* UIImage+.swift */,
+				A5FAE0AE25752085009EDFB6 /* UIWindow+.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A5FAE0B3257520E5009EDFB6 /* AppSession */ = {
+			isa = PBXGroup;
+			children = (
+				A5FAE0B4257520F3009EDFB6 /* SessionRouter.swift */,
+			);
+			path = AppSession;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -507,17 +533,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5FAE0542574EBB0009EDFB6 /* SimpleLoginViewModel.swift in Sources */,
+				A5FAE0AA2575203F009EDFB6 /* MyTripsEntities.swift in Sources */,
+				A5FAE0A025752020009EDFB6 /* MyTripsPresenter.swift in Sources */,
 				A5FAE0612574F713009EDFB6 /* UIColor+.swift in Sources */,
 				A5FAE04F2574EBA4009EDFB6 /* SimpleLoginController.swift in Sources */,
+				A5FAE0B5257520F3009EDFB6 /* SessionRouter.swift in Sources */,
 				A5FAE0702574FA70009EDFB6 /* SimpleLoginEntities.swift in Sources */,
 				A5FAE05B2574F6A2009EDFB6 /* ActionButton.swift in Sources */,
 				A58BA7892571175000ED9E3E /* Keychain.swift in Sources */,
+				A5FAE0AF25752085009EDFB6 /* UIWindow+.swift in Sources */,
 				A5FAE0812575011E009EDFB6 /* DependenciesContainer.swift in Sources */,
 				A57D38F425723FAA00321B05 /* HostController.swift in Sources */,
 				A57D38FB257240EC00321B05 /* DefaultsWrapper.swift in Sources */,
 				A5FAE09125750C50009EDFB6 /* ToastFactory.swift in Sources */,
 				A5FAE0962575193F009EDFB6 /* SecureStorage.swift in Sources */,
 				A58BA7332571158600ED9E3E /* AppDelegate.swift in Sources */,
+				A5FAE09B25751FF1009EDFB6 /* MyTripsController.swift in Sources */,
+				A5FAE0A525752034009EDFB6 /* MyTripsInteractor.swift in Sources */,
 				A5FAE06B2574F9BE009EDFB6 /* SimpleLoginAssembly.swift in Sources */,
 				A5FAE0662574F729009EDFB6 /* UIImage+.swift in Sources */,
 				A57D39002572417200321B05 /* SimpleStorage.swift in Sources */,

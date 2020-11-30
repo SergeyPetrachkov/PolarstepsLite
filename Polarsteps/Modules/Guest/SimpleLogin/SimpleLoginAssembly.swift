@@ -11,6 +11,7 @@ enum SimpleLoginAssembly {
   static func createModule(moduleIn: SimpleLogin.ModuleIn? = nil) -> SimpleLoginController {
     let viewModel = SimpleLoginViewModel(moduleIn)
     let controller = SimpleLoginController(viewModel)
+    viewModel.output = controller
     return controller
   }
 }
