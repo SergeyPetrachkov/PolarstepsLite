@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A56D7CC625754D4800B46BCB /* SimpleLoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56D7CC525754D4800B46BCB /* SimpleLoginRouter.swift */; };
 		A57D38F425723FAA00321B05 /* HostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D38F325723FAA00321B05 /* HostController.swift */; };
 		A57D38FB257240EC00321B05 /* DefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D38FA257240EC00321B05 /* DefaultsWrapper.swift */; };
 		A57D39002572417200321B05 /* SimpleStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D38FF2572417200321B05 /* SimpleStorage.swift */; };
@@ -70,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A56D7CC525754D4800B46BCB /* SimpleLoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLoginRouter.swift; sourceTree = "<group>"; };
 		A57D38F325723FAA00321B05 /* HostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostController.swift; sourceTree = "<group>"; };
 		A57D38FA257240EC00321B05 /* DefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsWrapper.swift; sourceTree = "<group>"; };
 		A57D38FF2572417200321B05 /* SimpleStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStorage.swift; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 				A5FAE0532574EBB0009EDFB6 /* SimpleLoginViewModel.swift */,
 				A5FAE06A2574F9BE009EDFB6 /* SimpleLoginAssembly.swift */,
 				A5FAE06F2574FA70009EDFB6 /* SimpleLoginEntities.swift */,
+				A56D7CC525754D4800B46BCB /* SimpleLoginRouter.swift */,
 			);
 			path = SimpleLogin;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 				A5FAE0962575193F009EDFB6 /* SecureStorage.swift in Sources */,
 				A58BA7332571158600ED9E3E /* AppDelegate.swift in Sources */,
 				A5FAE09B25751FF1009EDFB6 /* MyTripsController.swift in Sources */,
+				A56D7CC625754D4800B46BCB /* SimpleLoginRouter.swift in Sources */,
 				A5FAE0A525752034009EDFB6 /* MyTripsInteractor.swift in Sources */,
 				A5FAE06B2574F9BE009EDFB6 /* SimpleLoginAssembly.swift in Sources */,
 				A5FAE0DE2575342C009EDFB6 /* MyTripsDisplayManager.swift in Sources */,

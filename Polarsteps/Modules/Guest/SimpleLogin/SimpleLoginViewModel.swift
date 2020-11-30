@@ -22,6 +22,7 @@ final class SimpleLoginViewModel {
 
   private let api = DependenciesContainer.shared.flatApiClient
   private let storage = DependenciesContainer.shared.localStore
+  private let router = SimpleLoginRouter()
 
   init(_ moduleIn: SimpleLogin.ModuleIn?) {
     self.moduleIn = moduleIn
@@ -38,6 +39,7 @@ final class SimpleLoginViewModel {
         let loginResponse = try self.api.login(.init(login: login, password: password))
         self.storage.saveUser(.init(id: loginResponse.id, firstName: loginResponse.firstName, lastName: loginResponse.lastName))
         DispatchQueue.main.async {
+          self.router.showAuthorizedScenario(dependencies: DependenciesContainer.shared)
           self.output?.didLogin()
         }
       } catch {
