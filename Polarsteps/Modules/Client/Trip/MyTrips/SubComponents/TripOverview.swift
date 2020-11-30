@@ -72,7 +72,7 @@ final class TripOverview: UIView {
     view.alignment = .firstBaseline
     view.axis = .horizontal
     view.spacing = 10
-    view.distribution = .fillEqually
+    view.distribution = .fillProportionally
     return view
   }()
 
@@ -138,8 +138,7 @@ final class TripOverview: UIView {
     }
 
     self.visibilityLabel.text = state.isPublic ? "👁" : "🔒"
-
-    self.lengthLabel.set(number: state.tripLengthInKilometers, text: "KM".localized)
+    self.lengthLabel.set(topText: "kilometers".localized, bottomNumber: state.tripLengthInKilometers)
     self.setNeedsLayout()
   }
 }

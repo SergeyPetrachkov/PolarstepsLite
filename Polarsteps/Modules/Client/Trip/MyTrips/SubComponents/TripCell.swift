@@ -38,7 +38,7 @@ final class TripCellPresenter: GenericCollectionItemPresenter, ITripState {
   }
 
   var tripLengthInKilometers: Double {
-    0
+    self.dataContext.totalDistance
   }
 
   var isPublic: Bool {

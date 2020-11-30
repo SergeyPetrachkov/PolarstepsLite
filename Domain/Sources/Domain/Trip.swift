@@ -8,8 +8,9 @@ public struct Trip {
   public let startDate: Date
   public let endDate: Date
   public let media: MediaInfo
+  public let totalDistance: Double
 
-  public init(id: Int, title: String, steps: [TripStep], isVisible: Bool, startDate: Date, endDate: Date, mediaInfo: MediaInfo) {
+  public init(id: Int, title: String, steps: [TripStep], isVisible: Bool, startDate: Date, endDate: Date, mediaInfo: MediaInfo, totalDistance: Double) {
     self.id = id
     self.title = title
     self.steps = steps
@@ -17,6 +18,7 @@ public struct Trip {
     self.startDate = startDate
     self.endDate = endDate
     self.media = mediaInfo
+    self.totalDistance = totalDistance
   }
 }
 

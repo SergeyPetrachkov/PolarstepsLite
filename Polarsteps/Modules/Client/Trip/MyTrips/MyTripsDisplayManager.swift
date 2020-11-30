@@ -11,11 +11,11 @@ import SiberianVIPER
 final class MyTripsDisplayManager: SiberianCollectionViewManager {
 
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-    return 8
+    return 10
   }
 
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    return 8
+    return 10
   }
 
   override func collectionView(_ collectionView: UICollectionView,
@@ -29,6 +29,6 @@ final class MyTripsDisplayManager: SiberianCollectionViewManager {
   func collectionView(_ collectionView: UICollectionView,
                       layout collectionViewLayout: UICollectionViewLayout,
                       insetForSectionAt section: Int) -> UIEdgeInsets {
-    return UIEdgeInsets(top: 8, left: 0, bottom: 0, right: 0)
+    return UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0)
   }
 }

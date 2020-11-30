@@ -40,7 +40,6 @@ final class MyTripsController: UIViewController {
     self.collectionView.dataSource = self.displayManager
     self.collectionView.backgroundColor = .secondarySystemBackground
     self.view.addSubview(self.collectionView)
-//    self.collectionView.frame = self.view.bounds
     self.collectionView.translatesAutoresizingMaskIntoConstraints = false
     self.collectionView.pinEdges(to: self.view)
     TripCellPresenter.registerIn(self.collectionView)

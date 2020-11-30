@@ -27,7 +27,8 @@ extension Trip {
               isVisible: dto.visibility == 1,
               startDate: startDate,
               endDate: endDate,
-              mediaInfo: .init(imagePath: dto.coverPhotoPath)
+              mediaInfo: .init(imagePath: dto.coverPhotoPath),
+              totalDistance: dto.totalKM
     )
   }
 }

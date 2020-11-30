@@ -57,14 +57,20 @@ final class TripMetricLabel: UIView {
   // MARK: - Interface
 
   func set(number: Double, text: String) {
-    self.topLabel.text = TripMetricLabel.numberFormatter.string(from: NSNumber(value: number))
-    self.bottomLabel.text = text
-    self.setNeedsLayout()
+    self.set(topText: TripMetricLabel.numberFormatter.string(from: NSNumber(value: number)) ?? "", bottomText: text)
   }
 
   func set(number: Int, text: String) {
-    self.topLabel.text = "\(number)"
-    self.bottomLabel.text = text
+    self.set(topText: "\(number)", bottomText: text)
+  }
+
+  func set(topText: String, bottomNumber: Double) {
+    self.set(topText: topText, bottomText: TripMetricLabel.numberFormatter.string(from: NSNumber(value: bottomNumber)) ?? "")
+  }
+
+  func set(topText: String, bottomText: String) {
+    self.topLabel.text = topText
+    self.bottomLabel.text = bottomText
     self.setNeedsLayout()
   }
 }
