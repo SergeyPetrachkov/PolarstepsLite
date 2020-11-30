@@ -41,6 +41,15 @@
 		A5FAE0AA2575203F009EDFB6 /* MyTripsEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0A92575203F009EDFB6 /* MyTripsEntities.swift */; };
 		A5FAE0AF25752085009EDFB6 /* UIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0AE25752085009EDFB6 /* UIWindow+.swift */; };
 		A5FAE0B5257520F3009EDFB6 /* SessionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0B4257520F3009EDFB6 /* SessionRouter.swift */; };
+		A5FAE0C3257525D0009EDFB6 /* MyTripsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0C2257525D0009EDFB6 /* MyTripsRepository.swift */; };
+		A5FAE0C825752668009EDFB6 /* MyTripsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0C725752668009EDFB6 /* MyTripsAssembly.swift */; };
+		A5FAE0CD25752966009EDFB6 /* TripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0CC25752966009EDFB6 /* TripCell.swift */; };
+		A5FAE0D425752EE1009EDFB6 /* TripMetricLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0D325752EE1009EDFB6 /* TripMetricLabel.swift */; };
+		A5FAE0D92575311D009EDFB6 /* TripOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0D82575311D009EDFB6 /* TripOverview.swift */; };
+		A5FAE0DE2575342C009EDFB6 /* MyTripsDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0DD2575342C009EDFB6 /* MyTripsDisplayManager.swift */; };
+		A5FAE0E325753573009EDFB6 /* CollectionItemPresenter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0E225753572009EDFB6 /* CollectionItemPresenter+.swift */; };
+		A5FAE0E825753833009EDFB6 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0E725753833009EDFB6 /* UIView+Constraints.swift */; };
+		A5FAE0ED25753AB2009EDFB6 /* MyTripsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0EC25753AB2009EDFB6 /* MyTripsRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +104,15 @@
 		A5FAE0A92575203F009EDFB6 /* MyTripsEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsEntities.swift; sourceTree = "<group>"; };
 		A5FAE0AE25752085009EDFB6 /* UIWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+.swift"; sourceTree = "<group>"; };
 		A5FAE0B4257520F3009EDFB6 /* SessionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRouter.swift; sourceTree = "<group>"; };
+		A5FAE0C2257525D0009EDFB6 /* MyTripsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsRepository.swift; sourceTree = "<group>"; };
+		A5FAE0C725752668009EDFB6 /* MyTripsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsAssembly.swift; sourceTree = "<group>"; };
+		A5FAE0CC25752966009EDFB6 /* TripCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCell.swift; sourceTree = "<group>"; };
+		A5FAE0D325752EE1009EDFB6 /* TripMetricLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMetricLabel.swift; sourceTree = "<group>"; };
+		A5FAE0D82575311D009EDFB6 /* TripOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripOverview.swift; sourceTree = "<group>"; };
+		A5FAE0DD2575342C009EDFB6 /* MyTripsDisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsDisplayManager.swift; sourceTree = "<group>"; };
+		A5FAE0E225753572009EDFB6 /* CollectionItemPresenter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionItemPresenter+.swift"; sourceTree = "<group>"; };
+		A5FAE0E725753833009EDFB6 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		A5FAE0EC25753AB2009EDFB6 /* MyTripsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,10 +172,15 @@
 		A57D38E925723D2A00321B05 /* MyTrips */ = {
 			isa = PBXGroup;
 			children = (
+				A5FAE0D225752ECB009EDFB6 /* SubComponents */,
 				A5FAE09A25751FF1009EDFB6 /* MyTripsController.swift */,
 				A5FAE09F25752020009EDFB6 /* MyTripsPresenter.swift */,
 				A5FAE0A425752034009EDFB6 /* MyTripsInteractor.swift */,
 				A5FAE0A92575203F009EDFB6 /* MyTripsEntities.swift */,
+				A5FAE0C2257525D0009EDFB6 /* MyTripsRepository.swift */,
+				A5FAE0C725752668009EDFB6 /* MyTripsAssembly.swift */,
+				A5FAE0DD2575342C009EDFB6 /* MyTripsDisplayManager.swift */,
+				A5FAE0EC25753AB2009EDFB6 /* MyTripsRouter.swift */,
 			);
 			path = MyTrips;
 			sourceTree = "<group>";
@@ -374,6 +397,8 @@
 				A5FAE0602574F713009EDFB6 /* UIColor+.swift */,
 				A5FAE0652574F729009EDFB6 /* UIImage+.swift */,
 				A5FAE0AE25752085009EDFB6 /* UIWindow+.swift */,
+				A5FAE0E225753572009EDFB6 /* CollectionItemPresenter+.swift */,
+				A5FAE0E725753833009EDFB6 /* UIView+Constraints.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -384,6 +409,16 @@
 				A5FAE0B4257520F3009EDFB6 /* SessionRouter.swift */,
 			);
 			path = AppSession;
+			sourceTree = "<group>";
+		};
+		A5FAE0D225752ECB009EDFB6 /* SubComponents */ = {
+			isa = PBXGroup;
+			children = (
+				A5FAE0CC25752966009EDFB6 /* TripCell.swift */,
+				A5FAE0D325752EE1009EDFB6 /* TripMetricLabel.swift */,
+				A5FAE0D82575311D009EDFB6 /* TripOverview.swift */,
+			);
+			path = SubComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -540,10 +575,15 @@
 				A5FAE0B5257520F3009EDFB6 /* SessionRouter.swift in Sources */,
 				A5FAE0702574FA70009EDFB6 /* SimpleLoginEntities.swift in Sources */,
 				A5FAE05B2574F6A2009EDFB6 /* ActionButton.swift in Sources */,
+				A5FAE0C825752668009EDFB6 /* MyTripsAssembly.swift in Sources */,
 				A58BA7892571175000ED9E3E /* Keychain.swift in Sources */,
 				A5FAE0AF25752085009EDFB6 /* UIWindow+.swift in Sources */,
+				A5FAE0E325753573009EDFB6 /* CollectionItemPresenter+.swift in Sources */,
 				A5FAE0812575011E009EDFB6 /* DependenciesContainer.swift in Sources */,
+				A5FAE0C3257525D0009EDFB6 /* MyTripsRepository.swift in Sources */,
 				A57D38F425723FAA00321B05 /* HostController.swift in Sources */,
+				A5FAE0CD25752966009EDFB6 /* TripCell.swift in Sources */,
+				A5FAE0D425752EE1009EDFB6 /* TripMetricLabel.swift in Sources */,
 				A57D38FB257240EC00321B05 /* DefaultsWrapper.swift in Sources */,
 				A5FAE09125750C50009EDFB6 /* ToastFactory.swift in Sources */,
 				A5FAE0962575193F009EDFB6 /* SecureStorage.swift in Sources */,
@@ -551,8 +591,12 @@
 				A5FAE09B25751FF1009EDFB6 /* MyTripsController.swift in Sources */,
 				A5FAE0A525752034009EDFB6 /* MyTripsInteractor.swift in Sources */,
 				A5FAE06B2574F9BE009EDFB6 /* SimpleLoginAssembly.swift in Sources */,
+				A5FAE0DE2575342C009EDFB6 /* MyTripsDisplayManager.swift in Sources */,
 				A5FAE0662574F729009EDFB6 /* UIImage+.swift in Sources */,
 				A57D39002572417200321B05 /* SimpleStorage.swift in Sources */,
+				A5FAE0E825753833009EDFB6 /* UIView+Constraints.swift in Sources */,
+				A5FAE0ED25753AB2009EDFB6 /* MyTripsRouter.swift in Sources */,
+				A5FAE0D92575311D009EDFB6 /* TripOverview.swift in Sources */,
 				A57D390C257244C900321B05 /* IStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

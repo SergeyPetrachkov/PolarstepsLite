@@ -11,7 +11,7 @@ protocol ISessionRouter {}
 
 extension ISessionRouter {
   func showAuthorizedScenario(dependencies: DependenciesContainer) {
-    let module = UINavigationController(rootViewController: MyTripsController(nibName: nil, bundle: nil))
+    let module = UINavigationController(rootViewController: MyTripsAssembly().createModule())
     UIApplication.shared.delegate?.window??.set(rootViewController: module)
   }
 
@@ -25,10 +25,11 @@ extension ISessionRouter {
   func initSession(window: UIWindow) {
     let dependencies = DependenciesContainer.shared
     if dependencies.localStore.getUser() != nil {
+      window.rootViewController = UINavigationController(rootViewController: MyTripsAssembly().createModule())
       self.showAuthorizedScenario(dependencies: dependencies)
     } else {
       let loginModule = SimpleLoginAssembly.createModule()
-      UIApplication.shared.delegate?.window??.set(rootViewController: loginModule)
+      window.rootViewController = UINavigationController(rootViewController: loginModule)
     }
   }
 }
