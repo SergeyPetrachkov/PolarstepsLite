@@ -1,12 +1,15 @@
 import Domain
 import Foundation
+import Entities
+import APIClient
+import NetworkingCore
 
 final class SimpleStorage: IStorage {
   // MARK: - Private details
-  @UserDefault("localUser", defaultValue: nil)
+  @CodableUserDefault("localUser", defaultValue: nil)
   private var localUser: User?
 
-  @UserDefault("myTrips", defaultValue: [])
+  @CodableUserDefault("myTrips", defaultValue: [])
   private var myTrips: [Trip]
   
   // MARK: - IStorage
@@ -36,5 +39,32 @@ final class SimpleStorage: IStorage {
     var trips = self.myTrips
     trips.removeAll(where: { $0.id == trip.id })
     self.myTrips = trips
+  }
+
+  func setCookies(_ cookies: [HTTPCookie]) {
+    let cookiesStorage = HTTPCookieStorage.shared
+    let userDefaults = UserDefaults.standard
+
+    let serverBaseUrl = APIEndpoint<Any>.basePath
+    var cookieDict = [String : AnyObject]()
+
+    for cookie in cookiesStorage.cookies(for: NSURL(string: serverBaseUrl)! as URL)! {
+      cookieDict[cookie.name] = cookie.properties as AnyObject?
+    }
+    userDefaults.set(cookieDict, forKey: "cookiesKey")
+  }
+
+  func restoreCookies() {
+    let cookiesStorage = HTTPCookieStorage.shared
+    let userDefaults = UserDefaults.standard
+
+    if let cookieDictionary = userDefaults.dictionary(forKey: "cookiesKey") {
+
+      for (_, cookieProperties) in cookieDictionary {
+        if let cookie = HTTPCookie(properties: cookieProperties as! [HTTPCookiePropertyKey : Any] ) {
+          cookiesStorage.setCookie(cookie)
+        }
+      }
+    }
   }
 }

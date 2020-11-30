@@ -83,12 +83,15 @@ public enum Networking {
   ///   - urlResponse: URLResponse returned from an URLSession data task
   ///   - error: Error returned from an URLSession data task
   ///   - completion: A result type containing eiter the response or an error
-  public static func mapResponse(data: Data?, urlResponse: URLResponse?, error: Error?) -> FlatResult<Response> {
+  public static func mapResponse(data: Data?, urlResponse: URLResponse?, error: Error?, authHandler: ((String) -> Void)?) -> FlatResult<Response> {
     if let error = error {
       return .failure(error)
     } else {
       guard let httpUrlResponse = urlResponse as? HTTPURLResponse else {
         return .failure(APIError.unknownResponseType)
+      }
+      if let authHandler = authHandler, let rememberToken = httpUrlResponse.allHeaderFields["Set-Cookie"] as? String {
+        authHandler(rememberToken)
       }
       #if DEBUG
       if let data = data, let stringRepresentation = String(data: data, encoding: .utf8) {

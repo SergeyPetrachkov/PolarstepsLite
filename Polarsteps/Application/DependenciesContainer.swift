@@ -8,6 +8,7 @@
 import APIClient
 import NetworkingCore
 import Foundation
+import Entities
 
 final class DependenciesContainer {
 
@@ -16,12 +17,27 @@ final class DependenciesContainer {
   private init() {}
 
   lazy var localStore = SimpleStorage()
-  
+
+  lazy var session: URLSession = {
+    let configuration = URLSessionConfiguration.default
+    self.localStore.restoreCookies()
+    return URLSession(configuration: configuration)
+  }()
+
   lazy var apiProvider: APIProvider = {
-    let session = URLSession.shared
-    let provider = APIProvider(requestExecutor: DefaultRequestExecutor(session: session))
+    let provider = APIProvider(requestExecutor: DefaultRequestExecutor(session: self.session))
     return provider
   }()
 
-  lazy var apiClient = API(provider: self.apiProvider)
+
+  lazy var apiClient = API(provider: self.apiProvider, authHandler: self.setCookies(_:))
+
+  lazy var flatApiClient = FlatAPI(provider: self.apiClient)
+
+  func setCookies(_ cookies: String) {
+    print("Saving cookie...")
+    if let cookies = session.configuration.httpCookieStorage?.cookies {
+      self.localStore.setCookies(cookies)
+    }
+  }
 }

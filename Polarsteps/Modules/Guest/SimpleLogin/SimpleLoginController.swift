@@ -19,6 +19,7 @@ final class SimpleLoginController: UIViewController {
     let field = UITextField(frame: .zero)
     field.enablesReturnKeyAutomatically = true
     field.placeholder = "Email".localized
+    field.text = "little@bobbytables.com"
     field.keyboardType = .emailAddress
     field.borderStyle = .roundedRect
     field.accessibilityIdentifier = "email"
@@ -30,6 +31,7 @@ final class SimpleLoginController: UIViewController {
     let field = UITextField(frame: .zero)
     field.enablesReturnKeyAutomatically = true
     field.isSecureTextEntry = true
+    field.text = "Selectfrom"
     field.borderStyle = .roundedRect
     field.placeholder = "Password".localized
     field.accessibilityIdentifier = "password"
@@ -92,7 +94,7 @@ final class SimpleLoginController: UIViewController {
       self.submitButton.heightAnchor.constraint(equalToConstant: self.buttonConfig.buttonHeight).isActive = true
     }
 
-    self.configureUI()
+    configureUI()
 
     self.submitButton.tapHandler = { [weak self] in
       guard let self = self else {
@@ -103,9 +105,23 @@ final class SimpleLoginController: UIViewController {
       self.viewModel.submitCredentials(login: self.emailField.text, password: self.passwordField.text)
     }
   }
+}
 
-  // MARK: - Private methods
-  private func configureUI() {
+extension SimpleLoginController: SimpleLoginVMOutput {
+  func didLogin() {
+    
+  }
 
+  func didExitPendingState() {
+    self.submitButton.exitPendingState()
+  }
+
+  func didEnterPendingState() {
+    self.submitButton.enterPendingState()
+  }
+
+  func didFail(with error: Error) {
+    ToastFactory.showCenteredToast(message: error.localizedDescription)
   }
 }
+

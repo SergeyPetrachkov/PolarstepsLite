@@ -15,19 +15,19 @@ public final class APIProvider {
     self.jsonDecoder = jsonDecoder
   }
 
-  public func request(_ endpoint: APIEndpoint<Void>, completion: @escaping RequestCompletionHandler<Void>) {
+  public func request(_ endpoint: APIEndpoint<Void>, authHandler: ((String) -> Void)? = nil, completion: @escaping RequestCompletionHandler<Void>) {
     let request = endpoint.asURLRequest()
-    self.requestExecutor.execute(request) { completion(self.mapVoidResponse($0)) }
+    self.requestExecutor.execute(request, authHandler: authHandler) { completion(self.mapVoidResponse($0)) }
   }
 
-  public func request<T: Decodable>(_ endpoint: APIEndpoint<T>, completion: @escaping RequestCompletionHandler<T>) {
+  public func request<T: Decodable>(_ endpoint: APIEndpoint<T>, authHandler: ((String) -> Void)? = nil, completion: @escaping RequestCompletionHandler<T>) {
     let request = endpoint.asURLRequest()
-    self.requestExecutor.execute(request) { completion(self.mapResponse($0)) }
+    self.requestExecutor.execute(request, authHandler: authHandler) { completion(self.mapResponse($0)) }
   }
 
-  public func requestString(_ endpoint: APIEndpoint<String>, completion: @escaping RequestCompletionHandler<String>) {
+  public func requestString(_ endpoint: APIEndpoint<String>, authHandler: ((String) -> Void)? = nil, completion: @escaping RequestCompletionHandler<String>) {
     let request = endpoint.asURLRequest()
-    self.requestExecutor.execute(request) { completion(self.mapStringResponse($0)) }
+    self.requestExecutor.execute(request, authHandler: authHandler) { completion(self.mapStringResponse($0)) }
   }
 }
 

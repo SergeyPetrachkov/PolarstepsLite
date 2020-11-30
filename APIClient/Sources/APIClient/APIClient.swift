@@ -5,34 +5,42 @@ import Foundation
 public class API {
 
   private let provider: APIProvider
+  private let authHandler: ((String) -> Void)?
 
-  public init(provider: APIProvider) {
+  public init(provider: APIProvider, authHandler: ((String) -> Void)?) {
     self.provider = provider
+    self.authHandler = authHandler
   }
 
-  public func login(username: String, password: String, completion: @escaping (Result<LoginResponse, Error>) -> Void) {
-    
+  public func login(_ loginRequest: LoginRequest, completion: @escaping (Result<LoginResponse, Error>) -> Void) {
+    self.provider.request(.login(login: loginRequest.login, password: loginRequest.password), authHandler: self.authHandler, completion: completion)
   }
 
   public func getMyTrips(completion: @escaping (Result<GetTripsResponse, Error>) -> Void) {
-
+    self.provider.request(.myTrips(), completion: completion)
   }
 
   public func getTripDetails(tripId: Int, completion: @escaping (Result<GetTripDetailsResponse, Error>) -> Void) {
-
+    self.provider.request(.tripDetails(id: tripId), completion: completion)
   }
 }
 
-public enum FlatAPI {
-//  public static func getJobs() throws -> [Int] {
-//    return try Networking.requestData(functor: API.getJobs)
-//  }
-//
-//  public static func getJobDetails(id: Int) throws -> Post {
-//    return try Networking.requestData(id, functor: API.postDetails)
-//  }
-//
-//  public static func getUserDetails(id: String) throws -> User {
-//    return try Networking.requestData(id, functor: API.userDetails)
-//  }
+public class FlatAPI {
+  private let provider: API
+
+  public init(provider: API) {
+    self.provider = provider
+  }
+
+  public func login(_ request: LoginRequest) throws -> LoginResponse {
+    return try Networking.requestData(request, functor: self.provider.login)
+  }
+
+  public func getMyTrips() throws -> GetTripsResponse {
+    return try Networking.requestData(functor: self.provider.getMyTrips)
+  }
+
+  public func getTripDetails(tripId: Int) throws -> GetTripDetailsResponse {
+    return try Networking.requestData(tripId, functor: self.provider.getTripDetails)
+  }
 }

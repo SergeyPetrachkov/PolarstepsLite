@@ -32,6 +32,9 @@
 		A5FAE0702574FA70009EDFB6 /* SimpleLoginEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE06F2574FA70009EDFB6 /* SimpleLoginEntities.swift */; };
 		A5FAE0812575011E009EDFB6 /* DependenciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0802575011E009EDFB6 /* DependenciesContainer.swift */; };
 		A5FAE0862575017A009EDFB6 /* NetworkingCore in Frameworks */ = {isa = PBXBuildFile; productRef = A5FAE0852575017A009EDFB6 /* NetworkingCore */; };
+		A5FAE08C25750C17009EDFB6 /* JuicyToast in Frameworks */ = {isa = PBXBuildFile; productRef = A5FAE08B25750C17009EDFB6 /* JuicyToast */; };
+		A5FAE09125750C50009EDFB6 /* ToastFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE09025750C50009EDFB6 /* ToastFactory.swift */; };
+		A5FAE0962575193F009EDFB6 /* SecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAE0952575193F009EDFB6 /* SecureStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,8 @@
 		A5FAE06A2574F9BE009EDFB6 /* SimpleLoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLoginAssembly.swift; sourceTree = "<group>"; };
 		A5FAE06F2574FA70009EDFB6 /* SimpleLoginEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLoginEntities.swift; sourceTree = "<group>"; };
 		A5FAE0802575011E009EDFB6 /* DependenciesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesContainer.swift; sourceTree = "<group>"; };
+		A5FAE09025750C50009EDFB6 /* ToastFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastFactory.swift; sourceTree = "<group>"; };
+		A5FAE0952575193F009EDFB6 /* SecureStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +91,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5FAE0472574EB14009EDFB6 /* Domain in Frameworks */,
+				A5FAE08C25750C17009EDFB6 /* JuicyToast in Frameworks */,
 				A5FAE0862575017A009EDFB6 /* NetworkingCore in Frameworks */,
 				A57D39062572426B00321B05 /* DateHelper in Frameworks */,
 				A58BA783257116DE00ED9E3E /* SDWebImage in Frameworks */,
@@ -288,6 +294,7 @@
 				A57D38FA257240EC00321B05 /* DefaultsWrapper.swift */,
 				A57D38FF2572417200321B05 /* SimpleStorage.swift */,
 				A57D390B257244C900321B05 /* IStorage.swift */,
+				A5FAE0952575193F009EDFB6 /* SecureStorage.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -339,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				A5FAE05A2574F6A2009EDFB6 /* ActionButton.swift */,
+				A5FAE09025750C50009EDFB6 /* ToastFactory.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -376,6 +384,7 @@
 				A5FAE0462574EB14009EDFB6 /* Domain */,
 				A5FAE0482574EB21009EDFB6 /* APIClient */,
 				A5FAE0852575017A009EDFB6 /* NetworkingCore */,
+				A5FAE08B25750C17009EDFB6 /* JuicyToast */,
 			);
 			productName = Polarsteps;
 			productReference = A58BA72F2571158600ED9E3E /* Polarsteps.app */;
@@ -453,6 +462,7 @@
 				A58BA77B2571169B00ED9E3E /* XCRemoteSwiftPackageReference "SiberianVIPER" */,
 				A58BA781257116DE00ED9E3E /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				A57D39042572426B00321B05 /* XCRemoteSwiftPackageReference "DateHelper" */,
+				A5FAE08A25750C17009EDFB6 /* XCRemoteSwiftPackageReference "JuicyToast" */,
 			);
 			productRefGroup = A58BA7302571158600ED9E3E /* Products */;
 			projectDirPath = "";
@@ -505,6 +515,8 @@
 				A5FAE0812575011E009EDFB6 /* DependenciesContainer.swift in Sources */,
 				A57D38F425723FAA00321B05 /* HostController.swift in Sources */,
 				A57D38FB257240EC00321B05 /* DefaultsWrapper.swift in Sources */,
+				A5FAE09125750C50009EDFB6 /* ToastFactory.swift in Sources */,
+				A5FAE0962575193F009EDFB6 /* SecureStorage.swift in Sources */,
 				A58BA7332571158600ED9E3E /* AppDelegate.swift in Sources */,
 				A5FAE06B2574F9BE009EDFB6 /* SimpleLoginAssembly.swift in Sources */,
 				A5FAE0662574F729009EDFB6 /* UIImage+.swift in Sources */,
@@ -870,6 +882,14 @@
 				minimumVersion = 5.10.0;
 			};
 		};
+		A5FAE08A25750C17009EDFB6 /* XCRemoteSwiftPackageReference "JuicyToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SergeyPetrachkov/JuicyToast";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -904,6 +924,11 @@
 		A5FAE0852575017A009EDFB6 /* NetworkingCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NetworkingCore;
+		};
+		A5FAE08B25750C17009EDFB6 /* JuicyToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5FAE08A25750C17009EDFB6 /* XCRemoteSwiftPackageReference "JuicyToast" */;
+			productName = JuicyToast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

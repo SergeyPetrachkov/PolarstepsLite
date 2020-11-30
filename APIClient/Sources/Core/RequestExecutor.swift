@@ -6,5 +6,5 @@ public protocol RequestExecutor {
   /// - Parameters:
   ///   - urlRequest: The URLRequest to execute
   ///   - completion: A result type containing eiter the response or an error
-  func execute(_ urlRequest: URLRequest, completion: @escaping (FlatResult<Response>) -> Void)
+  func execute(_ urlRequest: URLRequest, authHandler: ((String) -> Void)?, completion: @escaping (FlatResult<Response>) -> Void)
 }

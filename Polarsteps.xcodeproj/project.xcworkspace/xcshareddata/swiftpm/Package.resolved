@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "JuicyToast",
+        "repositoryURL": "https://github.com/SergeyPetrachkov/JuicyToast",
+        "state": {
+          "branch": "main",
+          "revision": "b5cec7d265ba40132ff4b00f41dab4464020254a",
+          "version": null
+        }
+      },
+      {
         "package": "SDWebImage",
         "repositoryURL": "https://github.com/SDWebImage/SDWebImage",
         "state": {
